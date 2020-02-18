@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script defer src="Icons/fontawesome-all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Metamorphous|Lobster+Two|Tangerine"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="scripts/parallax.min.js"></script>
+</head>
+<body>
+
+<!--============== Future Plans =================-->
+
+<!-- Fix aside showing up when zooming in. = FIXED-->
+<!-- Optimize firefly Effect -->
+<!-- Add 'fireflies' in the caves -->
+
+<!--=============================================-->
+
+<header>
+    <!--Website Icon-->
+    <div class="icon">
+        <a href="index.html"><img src="images/lotusICO.png"></a>
+    </div>
+
+    <!--Header Navigation-->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+
+    <!--Search Box-->
+    <div class="searchBox">
+        <label for="searchBar"><i class="fas fa-search fa-lg"></i></label>
+        <input class="search" type="search" id="searchBar" placeholder="Search">
+    </div>
+
+    <!--Quality-->
+    <p class="gpumode" onclick="mode()" id="gpubutton">High Quality</p>
+
+</header>
+
+<main>
+    <div class="container">
+
+        <!--FIRST PARALLAX CONTENT (Forest)-->
+
+        <div class="parallax-window" data-parallax="scroll" data-speed="0.2" data-z-index="1"
+             data-image-src="images/forest4.jpg">
+            <div class="hero">
+                <canvas class="canvas" id="canvas"></canvas>
+                <h1>Story Time</h1>
+                <p>Once upon a time there was a blablablala. Amet debitis doloremque facere illo itaque minus
+                    molestiae nemo optio quam rem, sapiente tempore ut veritatis. Asperiores expedita iste magnam
+                    obcaecati
+                    sit?</p>
+            </div>
+
+            <div class="info infopart1">
+                <h2>And then there was</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda consequatur deserunt
+                    doloribus
+                    dolorum eligendi exercitationem fugit, illum natus necessitatibus nemo perspiciatis quibusdam sint
+                    sunt
+                    tenetur totam vel. Accusamus, non.</p>
+            </div>
+
+            <!--ForegroundLayer ground1-->
+            <img class="foregroundLYR1" src="images/spookyBG.png">
+
+        </div>
+
+        <!--Foreground Info-->
+        <div class="betweenpart betweeninfo">
+            <h3>But then...</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam cupiditate dignissimos dolorum totam?
+                Cum esse, illo inventore, minima minus numquam omnis porro praesentium reiciendis sit vel velit,
+                voluptate voluptates?</p>
+        </div>
+
+        <!--SECOND PARALLAX CONTENT (Cave)-->
+
+        <div class="parallax-window" data-parallax="scroll" data-speed="0.2" data-z-index="3"
+             data-image-src="images/caveBG.jpg">
+
+            <!--ForegroundLayer ceiling1-->
+            <img class="foregroundLYR2" src="images/ceilingFG.png">
+
+            <div class="info infopart2">
+                <h4>And now...</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem cum deserunt, dignissimos error
+                    eum eveniet
+                    inventore, ipsam iste laboriosam laborum nobis odio quas quidem ratione repellat rerum veniam
+                    vitae.</p>
+
+                <h5>...</h5>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--ASIDE-->
+
+<aside id="asidebar" class="asidebar">
+    <p>Menu</p>
+    <!--Toggle Button-->
+    <div class="toggler" onclick="togglebar()">
+        <div class="buttoncontainer" id="buttcon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <!--Link Lists-->
+    <ul>
+        <li><a href="#">My account</a></li>
+        <li><a href="#">Send feedback</a></li>
+        <li><a href="#">Preferences</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log out</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+
+</aside>
+
+<!--Toggle Button-->
+<div class="toggler2" onclick="togglebar2()">
+    <div class="buttoncontainer2" id="mobilebutt">
+        <div class="bar1-2"></div>
+        <div class="bar2-2"></div>
+        <div class="bar3-2"></div>
+    </div>
+</div>
+
+<div id="mobilemenu" class="mobilemenu">
+    <!--Title-->
+    <p>Menu</p>
+    <!--Link Lists-->
+    <ul>
+        <li><a href="#">My account</a></li>
+        <li><a href="#">Send feedback</a></li>
+        <li><a href="#">Preferences</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log out</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+</div>
+
+<!--Footer-->
+
+<footer>
+    <h5>The end</h5>
+    <div class="footlists">
+        <ul>
+                <li class="listhead">Community</li>
+                <li><a href="#">Git Hub</a></li>
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Reddit</a></li>
+                <li><a href="#">W3 School</a></li>
+                <li><a href="#">Code Pen</a></li>
+        </ul>
+        <ul>
+            <li class="listhead">More</li>
+            <li><a href="#">Herp</a></li>
+            <li><a href="#">Derp</a></li>
+            <li><a href="#">Flerp</a></li>
+            <li><a href="#">Shmerp</a></li>
+            <li><a href="#">Flerglebirdle</a></li>
+        </ul>
+        <ul>
+            <li class="listhead">Social</li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Snapchat</a></li>
+        </ul>
+        <form action="#" method="post">
+            <div class="combine">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="combine">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="combinetext">
+                <label for="comment">Comment:</label>
+                <textarea id="comment"></textarea>
+            </div>
+            <div class="submitcontainer">
+                <input type="submit" class="submit">
+            </div>
+        </form>
+    </div>
+    <p class="copyright">Copyright:© 2018 Enrico Fabio. All rights reserved</p>
+</footer>
+
+<!--SCRIPT-->
+
+<!--Firefly Effect-->
+<script src="scripts/Fireflies.js"></script>
+<!--Firefly Parallax-->
+<script src="scripts/FFparallax.js"></script>
+<!--Toggling Aside-->
+<script src="scripts/scripts.js"></script>
+
+</body>
